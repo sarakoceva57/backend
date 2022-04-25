@@ -1,0 +1,46 @@
+
+<div>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">|EMT Library|</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/books">Книги</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/categories">Категории</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-outline-success" type="button">Најава</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <script>
+    // Get the container element
+    var btnContainer = document.getElementById("navbarSupportedContent");
+
+    // Get all buttons inside the container
+    var btns = btnContainer.getElementsByClassName("nav-link");
+
+    // Loop through the buttons and add the active class
+    for (var i = 0; i < btns.length; i++) {
+      var current = document.getElementsByClassName("active");
+
+      if(window.location.href === "http://localhost:9090/categories"){
+        current[0].className = current[0].className.replace(" active", "");
+
+        // Add the active class
+        btns[i].className += " active";
+      }
+    }
+  </script>
+</div>
